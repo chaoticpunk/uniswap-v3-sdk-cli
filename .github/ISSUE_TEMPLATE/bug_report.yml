@@ -1,0 +1,50 @@
+name: Bug report
+description: Wrong number, crash, confusing output, or completion misbehaving
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The two things that make a report actionable are the exact
+        command and its full output — please redact your RPC key if you paste a `--rpc` argument.
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: The full command, and what it printed.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Wrong number
+        - Crash or unhelpful error message
+        - Output format
+        - Tab completion
+        - Slot0 / RPC
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Output of `v3sdk --version`
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Node version and OS
+      placeholder: Node 22.10.0 on macOS 15.1
+    validations:
+      required: true

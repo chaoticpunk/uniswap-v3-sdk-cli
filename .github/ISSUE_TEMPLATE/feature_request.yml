@@ -1,0 +1,21 @@
+name: Feature request
+description: A function worth adding, or a rough edge worth smoothing
+labels: [enhancement]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What are you trying to do?
+      description: The task, not the API you have in mind — that usually finds a simpler answer.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do it today?
+      description: |
+        If it is an SDK function you call by hand, paste the call — it usually maps onto one
+        `registry.ts` entry. If it needs the network, say which calls it would make.
+      render: js
+    validations:
+      required: false

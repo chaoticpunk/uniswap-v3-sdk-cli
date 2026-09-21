@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the README first
+    url: https://github.com/chaoticpunk/uniswap-v3-sdk-cli#readme
+    about: Install, usage, the ranked command list, and the four known traps.
+  - name: Security issue
+    url: https://github.com/chaoticpunk/uniswap-v3-sdk-cli/security/advisories/new
+    about: Report privately instead of opening a public issue.

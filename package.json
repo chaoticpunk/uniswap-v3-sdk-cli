@@ -1,0 +1,60 @@
+{
+  "name": "uniswap-v3-sdk-cli",
+  "version": "0.1.0",
+  "description": "Every Uniswap V3 SDK function as a command-line call: pure math, no RPC, no keys.",
+  "author": "chaoticpunk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaoticpunk/uniswap-v3-sdk-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chaoticpunk/uniswap-v3-sdk-cli/issues"
+  },
+  "homepage": "https://github.com/chaoticpunk/uniswap-v3-sdk-cli#readme",
+  "type": "module",
+  "bin": {
+    "v3sdk": "dist/cli.js"
+  },
+  "main": "dist/registry.js",
+  "types": "dist/registry.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/registry.d.ts",
+      "default": "./dist/registry.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node test/smoke.mjs && node test/cli.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "uniswap",
+    "v3",
+    "sdk",
+    "cli",
+    "ethereum",
+    "defi",
+    "sqrtPriceX96",
+    "tick"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ethersproject/keccak256": "^5.7.0",
+    "@uniswap/sdk-core": "^7.19.2",
+    "@uniswap/v3-sdk": "^3.31.3",
+    "jsbi": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.6.3"
+  }
+}
